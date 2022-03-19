@@ -9,7 +9,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 
-interface UserService {
+interface UserAPIService {
     @GET("users")
     fun getUsers(): Call<List<User>>
 
@@ -18,22 +18,12 @@ interface UserService {
 
     companion object {
         val API_URL = "https://jsonplaceholder.typicode.com"
-        fun create(): UserService {
+        fun create(): UserAPIService {
             val retrofit = Retrofit.Builder()
                 .baseUrl(API_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
-            return retrofit.create(UserService::class.java)
+            return retrofit.create(UserAPIService::class.java)
         }
-    }
-}
-
-class RetrofitConfigurations {
-    companion object {
-        val retrofit = Retrofit.Builder()
-            .baseUrl(API_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-        val userService = retrofit.create(UserService::class.java)
     }
 }
