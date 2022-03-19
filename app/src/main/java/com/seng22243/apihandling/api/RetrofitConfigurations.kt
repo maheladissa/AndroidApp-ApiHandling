@@ -1,6 +1,5 @@
 package com.seng22243.apihandling.api
 
-import com.seng22243.apihandling.api.UserService.Companion.API_URL
 import com.seng22243.apihandling.model.User
 import retrofit2.Call
 import retrofit2.Retrofit
