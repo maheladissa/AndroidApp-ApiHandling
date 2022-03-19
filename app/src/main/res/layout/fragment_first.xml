@@ -14,7 +14,7 @@
         android:layout_marginEnd="161dp"
         android:layout_marginStart="162dp"
         android:layout_marginTop="519dp"
-        android:text="@string/next"
+        android:text="@string/View"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,21 +22,24 @@
 
     <EditText
         android:id="@+id/editTextNumberDecimal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="377dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="608dp"
         android:layout_marginEnd="100dp"
         android:layout_marginStart="101dp"
         android:layout_marginTop="75dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/TextBox"
         android:inputType="numberDecimal"
         android:minHeight="48dp"
+        android:textColorHint="#757575"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/lable_name"

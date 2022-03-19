@@ -2,18 +2,19 @@
     <string name="app_name">ApiHandling</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
+    <string name="first_fragment_label">ApiHandling</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_first_fragment"></string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="textview">TextView</string>
-    <string name="nameLable">Name</string>
-    <string name="textview_username">Username</string>
-    <string name="textview_email">Email</string>
-    <string name="lable_email">Email</string>
-    <string name="lable_username">Username</string>
-    <string name="TextBox">ID</string>
+    <string name="nameLable">Name :</string>
+    <string name="textview_username"></string>
+    <string name="textview_email"></string>
+    <string name="lable_email">Email :</string>
+    <string name="lable_username">Username :</string>
+    <string name="TextBox">Insert an ID and click View to view user details</string>
+    <string name="View">View</string>
 </resources>

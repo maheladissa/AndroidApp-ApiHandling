@@ -40,28 +40,29 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        val id = binding.editTextNumberDecimal.editableText
 
-        val user = userAPIService.getUser("1");
-        user.enqueue(object : Callback<User> {
-            override fun onResponse(call: Call<User>, response: Response<User>) {
-                val body = response.body()
-                body?.let {
-                    Log.i("FirstFragment", it.name)
-                    binding.textviewName.text = it.name
-                    binding.textViewEmail.text = it.email
-                    binding.textViewUsername.text = it.username
-                }
-            }
-
-            override fun onFailure(call: Call<User>, t: Throwable) {
-                Log.i("FirstFragment", "error")
-            }
-
-        })
 
         binding.buttonFirst.setOnClickListener {
-            //
+            val id = binding.editTextNumberDecimal.editableText
+
+            val user = userAPIService.getUser(id.toString());
+            user.enqueue(object : Callback<User> {
+                override fun onResponse(call: Call<User>, response: Response<User>) {
+                    val body = response.body()
+                    body?.let {
+                        binding.textviewName.text = it.name
+                        binding.textViewEmail.text = it.email
+                        binding.textViewUsername.text = it.username
+                    }
+                }
+
+                override fun onFailure(call: Call<User>, t: Throwable) {
+                        binding.textviewName.text = "User"
+                        binding.textViewEmail.text = "Does not"
+                        binding.textViewUsername.text = "exist!"
+                    }
+
+            })
         }
     }
 
